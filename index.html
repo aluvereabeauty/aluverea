@@ -196,6 +196,31 @@
       .contact-float{padding:10px}
     }
 
+  .buy-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buy-section .price {
+  background: var(--accent);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 12px rgba(231,122,130,0.22);
+  white-space: nowrap;
+}
+
+.buy-section .btn-primary {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+    
   </style>
 </head>
 <body>
@@ -225,10 +250,13 @@
           <div class="breadcrumbs">PRODUK KAMI › JELLY MASK ALUVERÉA</div>
           <div class="muted" style="margin-top:6px">Niacinamide • Tranexamic Acid • Aloe Vera • Vitamin E Beads</div>
         </div>
-        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-          <div class="price">IDR 75K</div>
-          <a href="https://wa.me/6285161737749?text=Halo%20saya%20ingin%20memesan%20Jelly%20Mask%20ALUVERÉA" target="_blank" class="btn-primary" style="font-size:13px;margin-top:4px">Beli Sekarang</a>
-        </div>
+        <div class="buy-section">
+        <div class="price">IDR 75K</div>
+        <a href="https://wa.me/6285161737749?text=Halo%20saya%20ingin%20memesan%20Jelly%20Mask%20ALUVERÉA" 
+           target="_blank" 
+           class="btn-primary">
+           Beli Sekarang
+        </a>
       </div>
     </div>
 
@@ -298,3 +326,4 @@
   </script>
 </body>
 </html>
+
