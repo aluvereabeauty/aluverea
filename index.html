@@ -12,15 +12,14 @@
       --accent: #e77a82;
       --muted: #6b6b6b;
       --card-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      --glass: rgba(255,255,255,0.55);
-      --greenish: #9be36b;
     }
-    *{box-sizing:border-box}
+
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0;
       font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
       background: linear-gradient(180deg, #eaf2f1 0%, #fdeff0 100%);
       color:#222;
+      line-height:1.5;
     }
 
     .wrap{
@@ -33,16 +32,16 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      gap:12px;
       background:#404040;
       color:#fff;
-      padding:10px 16px;
+      padding:12px 16px;
       border-radius:8px;
       position:sticky;
       top:0;
       z-index:40;
+      font-weight:700;
+      font-size:18px;
     }
-    header .title{font-weight:700}
 
     .hero{
       margin-top:22px;
@@ -51,29 +50,27 @@
       padding:36px 24px;
       text-align:center;
       box-shadow: var(--card-shadow);
-      position:relative;
-      overflow:visible;
     }
+
     .brand-logo{
-      max-width:460px;
-      margin:0 auto 6px;
+      max-width:420px;
+      margin:0 auto 12px;
       border-radius:18px;
       background: white;
-      padding:22px;
+      padding:18px;
       display:inline-block;
     }
 
     .handle{font-weight:600;color:#333;margin-top:6px}
     .desc{color:var(--muted);font-size:13px;margin-top:6px;letter-spacing:0.6px}
 
-    /* social icons */
     .socials{
       display:flex;
       gap:14px;
       justify-content:center;
       margin-top:12px;
+      flex-wrap:wrap;
     }
-
     .icon-btn{
       width:42px;height:42px;border-radius:10px;
       display:inline-flex;align-items:center;justify-content:center;
@@ -84,9 +81,7 @@
       transform:scale(1.1);
       box-shadow:0 4px 12px rgba(0,0,0,0.15);
     }
-    .icon-btn img{
-      width:22px;height:22px;object-fit:contain;
-    }
+    .icon-btn img{width:22px;height:22px;object-fit:contain}
 
     .product-row{
       display:flex;
@@ -94,233 +89,212 @@
       margin-top:26px;
     }
     .product-card{
-      display:flex;align-items:center;gap:14px;
+      display:flex;
+      align-items:center;
+      gap:14px;
       background:linear-gradient(90deg,#ffdfe3,#ffeef0);
-      padding:14px 18px;border-radius:10px;border:2px dashed rgba(0,0,0,0.06);
+      padding:16px 18px;
+      border-radius:10px;
+      border:2px dashed rgba(0,0,0,0.06);
       max-width:760px;width:100%;
-    }
-    .product-thumb{
-      width:74px;height:74px;border-radius:8px;object-fit:cover;border:2px solid #fff;
-      box-shadow:0 6px 16px rgba(0,0,0,0.08);
-    }
-    .product-info{flex:1;text-align:left}
-    .breadcrumbs{font-size:13px;color:#35535a;font-weight:600}
-    .price{
-      background:var(--accent);color:white;padding:8px 10px;border-radius:8px;font-weight:700;font-size:13px;
-      box-shadow:0 6px 12px rgba(231,122,130,0.22);
+      box-shadow: var(--card-shadow);
     }
 
-    .gallery{
-      margin-top:28px;display:grid;grid-template-columns:1fr;gap:18px;
-      align-items:center;
+    .product-thumb{
+      width:74px;height:74px;border-radius:8px;object-fit:cover;
+      border:2px solid #fff;
+      box-shadow:0 6px 16px rgba(0,0,0,0.08);
+      flex-shrink:0;
     }
+
+    .product-info{flex:1;text-align:left}
+    .breadcrumbs{font-size:13px;color:#35535a;font-weight:600}
+    .muted{color:var(--muted);font-size:13px}
+    .price{
+      background:var(--accent);color:white;padding:8px 10px;border-radius:8px;
+      font-weight:700;font-size:13px;
+      box-shadow:0 6px 12px rgba(231,122,130,0.22);
+    }
+    .btn-primary{
+      background:var(--accent);color:white;
+      padding:10px 14px;border-radius:10px;font-weight:700;
+      text-decoration:none;display:inline-block;
+      transition:opacity 0.2s;
+    }
+    .btn-primary:hover{opacity:0.85;}
+
     .hero-product{
       border-radius:22px;
       overflow:hidden;
       box-shadow:var(--card-shadow);
-      background:white;padding:22px;text-align:center;
+      background:white;
+      padding:22px;
+      text-align:center;
+      margin-top:28px;
     }
-    .hero-product img{max-width:100%;height:auto;display:inline-block;border-radius:12px}
+    .hero-product img{max-width:100%;height:auto;border-radius:12px;display:block;margin:auto}
+
     .two-col {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  align-items: stretch;
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+    .img-card {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      text-align: center;
+      overflow: hidden;
+      height: 100%;
+    }
+    .img-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-.img-card {
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: var(--card-shadow);
-  text-align: center;
-  overflow: hidden;
-  height: 100%;
-}
+    /* Tombol Contact Mengambang */
+    .contact-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background: linear-gradient(135deg, #ff85b3, #ffc1d9);
+      padding: 14px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .contact-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    }
+    .contact-float img {
+      width: 28px;
+      height: 28px;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
 
-.img-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-
-    .fixed-cta{display:none;}
-
-    @media (max-width:780px){
-      .wrap{padding:12px}
-      .product-card{padding:12px}
-      .hero{padding:20px}
-      .gallery{grid-template-columns:1fr}
+    /* RESPONSIVE FIX */
+    @media (max-width: 780px) {
+      .wrap{padding:16px}
+      .product-card{flex-direction:column;text-align:center;gap:10px}
+      .product-info{text-align:center}
+      .product-thumb{width:120px;height:120px}
+      .hero{padding:22px 14px}
       .two-col{grid-template-columns:1fr}
-      .fixed-cta{
-        display:flex;position:fixed;left:12px;right:12px;bottom:12px;justify-content:space-between;
-        background:linear-gradient(90deg,#fff, #fff);padding:10px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
-      }
+      .brand-logo{padding:14px;max-width:100%}
     }
 
-    @media (max-width:420px){
-      header{padding:8px;font-size:14px}
+    @media (max-width: 420px) {
+      header{padding:10px;font-size:15px}
+      .contact-float{padding:10px}
     }
 
-    .muted{color:var(--muted);font-size:13px}
-    a { color:inherit; text-decoration:none }
-    .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700}
   </style>
 </head>
 <body>
-  <header>
-  <div class="title">ALUVERÉA</div>
-  </header>
+  <header>ALUVERÉA</header>
 
   <main class="wrap">
-    <section class="hero" aria-labelledby="brandname">
+    <section class="hero">
       <div class="brand-logo">
-        <img src="logo.jpeg" alt="ALUVERÉA logo" style="max-width:420px;display:block;margin:0 auto" />
+        <img src="logo.jpeg" alt="ALUVERÉA logo" style="max-width:100%;display:block;margin:auto" />
       </div>
-      
       <div class="handle">@aluverea.beauty</div>
       <div class="desc">ALUVERÉA • Skincare • Jelly Mask • Niacinamide • Aloe Vera</div>
 
       <div class="socials">
-        <a class="icon-btn" href="https://www.tiktok.com/@aluvereabeauty?_t=ZS-90aFgnixUBh&_r=1" target="_blank" title="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok">
-        </a>
-        <a class="icon-btn" href="https://www.instagram.com/aluverea.beauty" target="_blank" title="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        </a>
-        <a class="icon-btn" href="https://wa.me/6285161737749" target="_blank" title="WhatsApp">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-        <a class="icon-btn" href="https://maps.app.goo.gl/vURyqqcpq29d8ZRC8" target="_blank" title="Website">
-          <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Website">
-        </a>
+        <a class="icon-btn" href="https://www.tiktok.com/@aluvereabeauty?_t=ZS-90aFgnixUBh&_r=1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png" alt="TikTok"></a>
+        <a class="icon-btn" href="https://www.instagram.com/aluverea.beauty" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a class="icon-btn" href="https://wa.me/6285161737749" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+        <a class="icon-btn" href="https://maps.app.goo.gl/vURyqqcpq29d8ZRC8" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Website"></a>
       </div>
-<a href="#" class="contact-float" title="Hubungi Kami" id="openContact">
-  <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Contact Icon" />
-</a>
-<style>
-  .contact-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    background: linear-gradient(135deg, #ff85b3, #ffc1d9);
-    padding: 14px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .contact-float:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  }
-  .contact-float img {
-    width: 28px;
-    height: 28px;
-    display: block;
-    filter: brightness(0) invert(1);
-  }
-</style>
-
-<div id="contactModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);z-index:1000;justify-content:center;align-items:center;">
-  <div style="background:#fff;padding:24px;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.12);max-width:340px;width:100%">
-    <form id="contactForm">
-      <label>Full Name</label><br>
-      <input type="text" id="fullname" required style="width:100%"><br>
-      <label>E-mail</label><br>
-      <input type="email" id="email" required style="width:100%"><br>
-      <label>Message</label><br>
-      <input type="text" id="message" required style="width:100%"><br><br>
-      <button type="submit" style="width:100%;background:#111;color:#fff;padding:12px;border-radius:22px;border:none;">Contact Us</button>
-      <button type="button" id="closeContact" style="margin-top:4px;width:100%">Batal</button>
-    </form>
-  </div>
-</div>
-
-<script>
-  document.getElementById('openContact').onclick = function(e) {
-    e.preventDefault();
-    document.getElementById('contactModal').style.display = 'flex';
-  };
-  document.getElementById('closeContact').onclick = function() {
-    document.getElementById('contactModal').style.display = 'none';
-  };
-  document.getElementById('contactForm').onsubmit = function(e) {
-    e.preventDefault();
-    var name = document.getElementById('fullname').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var mailtoLink =
-      'mailto:aluvereabeauty@gmail.com'
-      + '?subject=Komplain%20Produk%20ALUVERÉA'
-      + '&body=Halo%20ALUVERÉA,%20saya%20ingin%20menyampaikan%20keluhan%20atau%20pertanyaan%20mengenai%20produk.%0A'
-      + 'Nama: ' + encodeURIComponent(name)
-      + '%0AEmail: ' + encodeURIComponent(email)
-      + '%0APesan: ' + encodeURIComponent(message);
-    window.location.href = mailtoLink;
-    document.getElementById('contactModal').style.display = 'none';
-  };
-</script>
-
-
-
-      <div class="product-row">
-        <div class="product-card">
-          <img class="product-thumb" src="tube1.jpeg" alt="produk ALUVERÉA" />
-          <div class="product-info">
-            <div class="breadcrumbs">PRODUK KAMI › JELLY MASK ALUVERÉA</div>
-            <div class="muted" style="margin-top:6px">Niacinamide • Tranexamic Acid • Aloe Vera • Vitamin E Beads</div>
-          </div>
-          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
-  <div class="price">IDR 75K</div>
-  <a href="https://wa.me/6285161737749?text=Halo%20saya%20ingin%20memesan%20Jelly%20Mask%20ALUVERÉA" 
-     target="_blank" 
-     class="btn-primary" 
-     style="font-size:13px;margin-top:4px">
-     Beli Sekarang
-  </a>
-</div>
-
-        </div>
-      </div>
-
     </section>
 
+    <!-- Produk -->
+    <div class="product-row">
+      <div class="product-card">
+        <img class="product-thumb" src="tube1.jpeg" alt="produk ALUVERÉA" />
+        <div class="product-info">
+          <div class="breadcrumbs">PRODUK KAMI › JELLY MASK ALUVERÉA</div>
+          <div class="muted" style="margin-top:6px">Niacinamide • Tranexamic Acid • Aloe Vera • Vitamin E Beads</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+          <div class="price">IDR 75K</div>
+          <a href="https://wa.me/6285161737749?text=Halo%20saya%20ingin%20memesan%20Jelly%20Mask%20ALUVERÉA" target="_blank" class="btn-primary" style="font-size:13px;margin-top:4px">Beli Sekarang</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deskripsi Produk -->
     <div class="hero-product">
-  <img src="tube2.jpeg" alt="ALUVERÉA jelly mask" />
-  <div style="margin-top:12px; color:#555; font-size:14px; line-height:1.6;">
-    <strong>JELLY MASK ALUVERÉA</strong> adalah masker dengan kombinasi <em>Niacinamide</em>,
-    <em>Tranexamic Acid</em>, dan <em>Aloe Vera</em> yang membantu mencerahkan kulit,
-    melembapkan secara mendalam, serta menenangkan iritasi ringan.  
-    Cocok untuk semua jenis kulit dan memberikan sensasi dingin serta lembut setelah digunakan.
-  </div>
-</div>
-
-      <div class="two-col">
-        <div class="img-card">
-          <img src="model1.jpeg" alt="model memakai produk" />
-        </div>
-        <div class="img-card">
-          <img src="tube1.jpeg" alt="tube produk" />
-        </div>
+      <img src="tube2.jpeg" alt="ALUVERÉA jelly mask" />
+      <div style="margin-top:12px; color:#555; font-size:14px; line-height:1.6;">
+        <strong>JELLY MASK ALUVERÉA</strong> adalah masker dengan kombinasi <em>Niacinamide</em>,
+        <em>Tranexamic Acid</em>, dan <em>Aloe Vera</em> yang membantu mencerahkan kulit,
+        melembapkan secara mendalam, serta menenangkan iritasi ringan.
+        Cocok untuk semua jenis kulit dan memberikan sensasi dingin serta lembut setelah digunakan.
       </div>
+    </div>
 
-      <div class="two-col">
-        <div class="img-card">
-          <img src="tube2.jpeg" alt="tuang produk ke tangan" />
-        </div>
-        <div class="img-card">
-          <img src="model2.jpeg" alt="senyum sambil memegang produk" />
-        </div>
-      </div>
-    </section>
+    <!-- Galeri -->
+    <div class="two-col">
+      <div class="img-card"><img src="model1.jpeg" alt="model memakai produk" /></div>
+      <div class="img-card"><img src="tube1.jpeg" alt="tube produk" /></div>
+    </div>
+    <div class="two-col">
+      <div class="img-card"><img src="tube2.jpeg" alt="tuang produk ke tangan" /></div>
+      <div class="img-card"><img src="model2.jpeg" alt="senyum sambil memegang produk" /></div>
+    </div>
   </main>
 
   <footer style="text-align:center;padding:28px 12px;color:var(--muted)">
     © <strong>ALUVERÉA</strong> • All rights reserved
   </footer>
+
+  <!-- Tombol & Modal Contact -->
+  <a href="#" class="contact-float" title="Hubungi Kami" id="openContact">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Contact Icon" />
+  </a>
+
+  <div id="contactModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);z-index:1000;justify-content:center;align-items:center;">
+    <div style="background:#fff;padding:24px;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.12);max-width:340px;width:90%">
+      <form id="contactForm">
+        <label>Full Name</label><br>
+        <input type="text" id="fullname" required style="width:100%;margin-bottom:8px"><br>
+        <label>E-mail</label><br>
+        <input type="email" id="email" required style="width:100%;margin-bottom:8px"><br>
+        <label>Message</label><br>
+        <input type="text" id="message" required style="width:100%;margin-bottom:12px"><br>
+        <button type="submit" style="width:100%;background:#111;color:#fff;padding:12px;border-radius:22px;border:none;">Contact Us</button>
+        <button type="button" id="closeContact" style="margin-top:6px;width:100%">Batal</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('openContact').onclick = e => {
+      e.preventDefault();
+      document.getElementById('contactModal').style.display = 'flex';
+    };
+    document.getElementById('closeContact').onclick = () => {
+      document.getElementById('contactModal').style.display = 'none';
+    };
+    document.getElementById('contactForm').onsubmit = e => {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('fullname').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const message = encodeURIComponent(document.getElementById('message').value);
+      const mailto = `mailto:aluvereabeauty@gmail.com?subject=Komplain Produk ALUVERÉA&body=Halo ALUVERÉA,%0ANama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+      window.location.href = mailto;
+      document.getElementById('contactModal').style.display = 'none';
+    };
+  </script>
 </body>
 </html>
